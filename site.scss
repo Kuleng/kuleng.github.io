@@ -1,0 +1,146 @@
+
+$list_attr1 : none; //for decoration and and list style
+$default_font : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+#details, #family {
+    text-align: center;
+}
+
+#header_menu{ //nesting
+    overflow: hidden;
+    display: flex;
+    height: 60px;
+
+    #header_list{
+        float: none;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header-link{
+        border: 1px solid black;
+        float: left;
+        list-style: $list_attr1;
+        padding: 10px;
+        margin: 0px 5px 10px 5px;
+    }
+
+    a {
+        text-align: center;
+        text-decoration: $list_attr1;
+        font-family: $default_font;
+        color: black;
+    }
+
+    a:hover {
+        color: red;
+    }
+}
+
+//Inheritance and variables
+%textTitle {
+    font-family: $default_font;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2 {
+    @extend %textTitle;
+
+    //override font-size
+    font-size: 24px;
+}
+
+h3 {
+    @extend %textTitle;
+
+    text-decoration: underline;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;    
+
+    th {
+        text-emphasis: bold;
+    }
+
+    th, td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+#affilParent {
+    overflow: hidden;
+    border : 1px solid black;
+
+    display: flexbox;
+    margin-left: 15%;
+    margin-right: auto;
+    a{
+        float: left;
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+        text-align: center;
+        @extend %textTitle;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media (min-width: 500px) {
+    body{
+        background-color: gray;
+    }
+}
+
+@media (max-width: 499px) {
+    body{
+        background-color: black;
+    }
+
+    h3, h2,h5, p, ol, a {
+        color: white;
+    }
+
+    table {
+        border: 1px solid white;
+        border-collapse: collapse;
+        color: white;
+        th, td {
+            border: 1px solid white;
+        }
+    }
+
+    #header_list{
+        a {
+            color: white;
+        }
+
+        .header-link {
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+    #header_menu {
+        height: 200px;
+    }
+}
+
+li {
+    overflow: hidden;
+    .game_image {
+        float: right;
+        max-width: 100%;
+        height: auto;
+    }
+}

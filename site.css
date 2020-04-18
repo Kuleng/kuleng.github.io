@@ -1,0 +1,98 @@
+#details, #family {
+  text-align: center; }
+
+#header_menu {
+  overflow: hidden;
+  display: flex;
+  height: 60px; }
+  #header_menu #header_list {
+    float: none;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  #header_menu .header-link {
+    border: 1px solid black;
+    float: left;
+    list-style: none;
+    padding: 10px;
+    margin: 0px 5px 10px 5px; }
+  #header_menu a {
+    text-align: center;
+    text-decoration: none;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: black; }
+  #header_menu a:hover {
+    color: red; }
+
+h2, h3, #affilParent a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  text-decoration: underline; }
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto; }
+  table th {
+    text-emphasis: bold; }
+  table th, table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px; }
+
+#affilParent {
+  overflow: hidden;
+  border: 1px solid black;
+  display: flexbox;
+  margin-left: 15%;
+  margin-right: auto; }
+  #affilParent a {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black; }
+
+@media (min-width: 500px) {
+  body {
+    background-color: gray; } }
+@media (max-width: 499px) {
+  body {
+    background-color: black; }
+
+  h3, h2, h5, p, ol, a {
+    color: white; }
+
+  table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white; }
+    table th, table td {
+      border: 1px solid white; }
+
+  #header_list a {
+    color: white; }
+  #header_list .header-link {
+    color: white;
+    border: 1px solid white; }
+
+  #header_menu {
+    height: 200px; } }
+li {
+  overflow: hidden; }
+  li .game_image {
+    float: right;
+    max-width: 100%;
+    height: auto; }
+
+/*# sourceMappingURL=site.css.map */
